@@ -11,7 +11,8 @@ class RailsDebugBar
 		end
 		
 		parts = ["DEBUG",
-			rails_version
+			rails_version,
+			"#{controller.class.to_s}/#{controller.action_name}.#{controller.request.format}"
 		]
 		
 		
