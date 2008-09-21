@@ -43,7 +43,7 @@ class RailsDebugBar
 		}
 		</style>
 		EOF
-		parts_for_insertion = parts.map{|s| "<li>#{CGI::escapeHTML s}</li>"}
+		parts_for_insertion = array_to_li(parts)
 		html_for_insertion = "<ul id=\"rails_debug_bar\">#{parts_for_insertion}</ul>"
 		return css_for_insertion + html_for_insertion
 	end
