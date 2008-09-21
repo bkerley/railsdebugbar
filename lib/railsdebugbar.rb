@@ -47,4 +47,21 @@ class RailsDebugBar
 		html_for_insertion = "<ul id=\"rails_debug_bar\">#{parts_for_insertion}</ul>"
 		return css_for_insertion + html_for_insertion
 	end
+	
+	private
+	def self.array_to_li(array)
+		array.map do |s|
+			if s.is_a? Array
+				"<li>#{CGI::escapeHTML s.first}<ul>#{array_to_li(s[1..-1])}</ul></li>"
+			else
+				"<li>#{CGI::escapeHTML s}</li>"
+			end
+		end
+	end
+	
+	def self.hash_to_array(hash)
+		hash.map do |k,v|
+			"#{k}: #{v}"
+		end
+	end
 end
