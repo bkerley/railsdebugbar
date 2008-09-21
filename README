@@ -1,13 +1,19 @@
-Railsdebugbar
-=============
+Rails Debug Bar
+===============
 
-Introduction goes here.
+Bar of diagnostic info for Rails.  Inspired by
+http://rob.cogit8.org/blog/2008/Sep/19/introducing-django-debug-toolbar/
 
+Expect this to need extending to be useful for you.  Patches accepted,
+forking encouraged.
 
-Example
+Usage
 =======
 
-Example goes here.
+    class ApplicationController < ActionController::Base
+      after_filter ::RailsDebugBar
+    end
+    
 
-
-Copyright (c) 2008 [name of plugin creator], released under the MIT license
+Copyright (c) 2008 Bryce Kerley, released under the MIT license.
+My version: http://github.com/bkerley/railsdebugbar/tree/master
