@@ -48,8 +48,8 @@ class RailsDebugBar
 		}
 		ul#rails_debug_bar li:hover ul {
 			display: block;
-			position: relative;
-			bottom: -2em;
+			position: absolute;
+			z-index: 2;
 		}
 		ul#rails_debug_bar li ul li {
 			display: block;
