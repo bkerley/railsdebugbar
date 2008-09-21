@@ -41,6 +41,17 @@ class RailsDebugBar
 			background-color: #fda;
 			color: black;
 		}
+		ul#rails_debug_bar li ul {
+			display: none;
+		}
+		ul#rails_debug_bar li:hover ul {
+			display: block;
+			position: relative;
+			bottom: -2em;
+		}
+		ul#rails_debug_bar li ul li {
+			display: block;
+		}
 		</style>
 		EOF
 		parts_for_insertion = array_to_li(parts)
