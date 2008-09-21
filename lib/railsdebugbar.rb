@@ -12,7 +12,8 @@ class RailsDebugBar
 		
 		parts = ["DEBUG",
 			rails_version,
-			"#{controller.class.to_s}/#{controller.action_name}.#{controller.request.format}"
+			"#{controller.class.to_s}/#{controller.action_name}.#{controller.request.format}",
+			"#{controller.response.status}"
 		]
 		
 		
