@@ -37,7 +37,7 @@ class RailsDebugBar
 			padding-left: 0
 		}
 		ul#rails_debug_bar li {
-			display: inline;
+			display: inline-block;
 			padding: 0.2em;
 			border: 1px solid black;
 			background-color: #fda;
@@ -45,6 +45,7 @@ class RailsDebugBar
 		}
 		ul#rails_debug_bar li ul {
 			display: none;
+			padding-left: 0px;
 		}
 		ul#rails_debug_bar li:hover ul {
 			display: block;
